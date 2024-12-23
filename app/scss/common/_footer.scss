@@ -1,0 +1,210 @@
+.footer {
+  background-color: #666666;
+  padding: 60px 0 20px 0;
+  @media (max-width: 1549px) {
+    padding-top: 50px;
+  }
+  @media (max-width: 999px) {
+    padding-top: 40px;
+  }
+  @media (max-width: 759px) {
+    padding-top: 30px;
+  }
+  &__cols {
+    display: flex;
+    justify-content: space-between;
+    padding-right: 119px;
+    padding-bottom: 60px;
+    border-bottom: 1px solid #999999;
+    margin-bottom: 20px;
+    @media (max-width: 1549px) {
+      padding-right: 106px;
+      padding-bottom: 50px;
+    }
+    @media (max-width: 1249px) {
+      padding-right: 0;
+    }
+    @media (max-width: 999px) {
+      padding-bottom: 30px;
+      margin-bottom: 15px;
+      justify-content: normal;
+      display: flex;
+      flex-wrap: wrap;
+    }
+    @media (max-width: 759px) {
+      flex-direction: column;
+      flex-wrap: nowrap;
+    }
+  }
+  &__col {
+    display: flex;
+    flex-direction: column;
+    &:not(:last-child) {
+      @media (max-width: 759px) {
+        margin-bottom: 30px;
+      }
+    }
+    &:first-child {
+      @media (max-width: 999px) {
+        width: 50%;
+      }
+      @media (max-width: 759px) {
+        width: 100%;
+      }
+    }
+    &:nth-child(2) {
+      @media (max-width: 999px) {
+        padding-right: 116px;
+        width: 50%;
+      }
+      @media (max-width: 759px) {
+        width: 100%;
+      }
+    }
+    &:nth-child(3) {
+      @media (max-width: 999px) {
+        width: 100%;
+        margin-top: -18px;
+        padding-left: 349px;
+      }
+      @media (max-width: 759px) {
+        width: 100%;
+        margin-top: 0;
+        padding-left: 0;
+      }
+    }
+  }
+  &__logo {
+    display: flex;
+    svg {
+      @media (max-width: 1549px) {
+        width: 107px;
+        height: 107px;
+      }
+      @media (max-width: 999px) {
+        height: 69px;
+        width: 69px;
+      }
+    }
+  }
+  &-title {
+    margin: 40px 0 30px 0;
+    color: #fff;
+    @media (max-width: 1549px) {
+      margin-top: 30px;
+    }
+    @media (max-width: 999px) {
+      margin-top: 20px;
+      margin-bottom: 15px;
+    }
+  }
+  &__bot {
+    display: flex;
+    justify-content: space-between;
+    @media (max-width: 759px) {
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+  &__left {
+    color: #E6E6E6;
+    @media (max-width: 759px) {
+      margin-bottom: 10px;
+    }
+  }
+  &__right {
+    span {
+      color: #E6E6E6;
+      margin-right: 10px;
+      @media (max-width: 999px) {
+        margin-right: 5px;
+      }
+    }
+    a {
+      color: #FFFFFF;
+      &:hover {
+        color: #FFDD00;
+        text-decoration: underline;
+      }
+    }
+  }
+  &__contacts {
+    display: flex;
+    flex-direction: column;
+  }
+  a.footer__contact {
+    align-items: center;
+    &:hover {
+      p {
+        color: #FFDD00;
+        text-decoration: underline;
+      }
+    }
+  }
+  &__contact {
+    display: flex;
+    &:not(:last-child) {
+      margin-bottom: 30px;
+      @media (max-width: 999px) {
+        margin-bottom: 15px;
+      }
+    }
+    svg {
+      margin-right: 20px;
+      @media (max-width: 999px) {
+        width: 20px;
+        height: 20px;
+        margin-right: 10px;
+      }
+    }
+    p {
+      color: #E6E6E6;
+      transition-duration: .4s;
+      display: flex;
+      flex-direction: column;
+      span {
+        color: inherit;
+        &:not(:last-child) {
+          margin-bottom: 8px;
+        }
+      }
+    }
+  }
+  &__socials {
+    display: flex;
+    flex-direction: column;
+    &-title {
+      color: #fff;
+      margin-bottom: 20px;
+      @media (max-width: 999px) {
+        margin-bottom: 10px;
+      }
+    }
+    &-wrapper {
+      display: flex;
+      a {
+        background-color: #FFFFFF;
+        width: 48px;
+        height: 48px;
+        display: flex;
+        align-items: center;
+        border-radius: 50%;
+        justify-content: center;
+        transition-duration: .4s;
+        &:hover {
+          background-color: #FFDD00;
+          path {
+            fill: #000;
+          }
+        }
+        &:not(:last-child) {
+          margin-right: 20px;
+        }
+        path {
+          transition-duration: .4s;
+        }
+      }
+    }
+  }
+}

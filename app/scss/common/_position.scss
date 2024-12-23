@@ -1,0 +1,44 @@
+.position {
+  margin-top: 60px;
+  position: relative;
+  z-index: 10;
+  margin-bottom: 40px;
+  @media (max-width: 1549px) {
+    margin-top: 53px;
+  }
+  @media (max-width: 999px) {
+    margin-top: 31px;
+    margin-bottom: 30px;
+  }
+  @media (max-width: 759px) {
+    margin-top: 26px;
+    margin-bottom: 20px;
+  }
+  .container {
+    flex-direction: row;
+  }
+  &__link {
+    display: flex;
+    align-items: center;
+    span {
+      transition-duration: .4s;
+    }
+    &:last-child {
+      pointer-events: none;
+      svg {
+        display: none;
+      }
+      span {
+        color: #999999;
+      }
+    }
+    svg {
+      margin: 0 5px;
+    }
+    &:hover {
+      span {
+        color: #AD1C29;
+      }
+    }
+  }
+}

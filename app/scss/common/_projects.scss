@@ -1,0 +1,120 @@
+.projects {
+  &__items {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 30px;
+    @media (max-width: 1249px) {
+      grid-template-columns: repeat(2, 1fr);
+      grid-gap: 30px;
+    }
+    @media (max-width: 999px) {
+      grid-gap: 20px;
+      grid-template-columns: repeat(2, 1fr);
+    }
+    @media (max-width: 759px) {
+      grid-template-columns: 1fr;
+      grid-gap: 15px;
+    }
+  }
+  &__item {
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    &:hover {
+      .projects__item-text {
+        &:after {
+          transform: translateY(0);
+        }
+      }
+    }
+    &-img {
+      position: relative;
+      z-index: 1;
+      padding-top: 67.924528301%;
+      @media (max-width: 1249px) {
+        height: 266px;
+        padding-top: 0;
+        max-height: 266px;
+      }
+      @media (max-width: 999px) {
+        max-height: none;
+        padding-top: 67.924528301%;
+        height: auto;
+      }
+      img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+      }
+    }
+    &-text {
+      display: flex;
+      flex-direction: column;
+      padding: 35px 30px;
+      position: relative;
+      @media (max-width: 1549px) {
+        padding: 30px 25px;
+      }
+      @media (max-width: 1249px) {
+        padding: 25px 20px;
+      }
+      @media (max-width: 999px) {
+        padding: 25px 20px;
+      }
+      &:after {
+        content: '';
+        position: absolute;
+        left: 0;
+        z-index: -1;
+        top: 0;
+        width: 100%;
+        transition-duration: .4s;
+        height: 100%;
+        transform: translateY(calc(-100% + 5px));
+        background-color: #FFDD00;
+      }
+    }
+    &-title {
+      margin-bottom: 15px;
+      display: -webkit-box;
+      -webkit-line-clamp: 2; // количество строк
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+      @media (max-width: 999px) {
+        margin-bottom: 10px;
+      }
+    }
+    &-p {
+      display: -webkit-box;
+      -webkit-line-clamp: 2; // количество строк
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+    }
+  }
+  .btn-red {
+    margin-top: 40px;
+    margin-left: auto;
+    margin-right: auto;
+    @media (max-width: 1549px) {
+      margin-top: 30px;
+    }
+    @media (max-width: 999px) {
+      margin-top: 20px;
+    }
+  }
+  &_projects {
+    .top {
+      @media (max-width: 999px) {
+        margin-bottom: 40px;
+      }
+      @media (max-width: 759px) {
+        margin-bottom: 30px;
+      }
+    }
+    .title {
+      margin-left: 0;
+    }
+  }
+}

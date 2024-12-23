@@ -1,0 +1,77 @@
+.numbers {
+  background-color: #FFDD00;
+  padding: 60px 0;
+  @media (max-width: 1549px) {
+    padding: 50px 0;
+  }
+  @media (max-width: 999px) {
+    padding: 30px 0;
+  }
+  &__items {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-gap: 30px;
+    @media (max-width: 999px) {
+      display: grid;
+      grid-template-areas: 'one one two two three three' 'four four four five five five';
+      grid-gap: 20px;
+      grid-template-columns: repeat(6, 1fr);
+    }
+    @media (max-width: 759px) {
+      grid-template-areas: 'one two' 'three four' 'five five';
+      grid-template-columns: repeat(2, 1fr);
+      grid-gap: 20px;
+    }
+  }
+  &__item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    &:first-child {
+      @media (max-width: 999px) {
+        grid-area: one;
+      }
+    }
+    &:nth-child(2) {
+      @media (max-width: 999px) {
+        grid-area: two;
+      }
+    }
+    &:nth-child(3) {
+      @media (max-width: 999px) {
+        grid-area: three;
+      }
+    }
+    &:nth-child(4) {
+      @media (max-width: 999px) {
+        grid-area: four;
+      }
+    }
+    &:nth-child(5) {
+      @media (max-width: 999px) {
+        grid-area: five;
+      }
+    }
+    &-title {
+      font-family: 'Open Sans';
+      font-style: normal;
+      font-weight: 600;
+      font-size: 64px;
+      line-height: 87px;
+
+      /* Main/#000 */
+
+      color: #000000;
+      margin-bottom: 5px;
+      @media (max-width: 1549px) {
+        font-size: 50px;
+        line-height: 68px;
+      }
+      @media (max-width: 999px) {
+        font-size: 34px;
+        line-height: 46px;
+      }
+    }
+  }
+}

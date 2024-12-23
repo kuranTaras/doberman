@@ -1,0 +1,22 @@
+.blog {
+  .title {
+    margin-left: 0;
+  }
+  &__items {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 30px;
+    @media (max-width: 1249px) {
+      grid-template-columns: repeat(2, 1fr);
+      grid-gap: 30px;
+    }
+    @media (max-width: 999px) {
+      grid-template-columns: repeat(2, 1fr);
+      grid-gap: 20px;
+    }
+    @media (max-width: 759px) {
+      grid-template-columns: 1fr;
+      grid-gap: 15px;
+    }
+  }
+}
